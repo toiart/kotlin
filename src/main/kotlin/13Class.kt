@@ -1,13 +1,8 @@
 package org.example
 
 fun main() {
-    val person = Person().apply {
-        name = "Alice"
-        age = 25
-    }
-    with(person) {
-        introduce()
-    }
+    val person = Person()
+    person.introduce()
 
     // with constructor
     val house = House("green", 4)
@@ -28,6 +23,5 @@ class Person {
 }
 
 class House(val color: String, val numRooms: Int) {
-    fun getNumberOfRooms(): Int = numRooms
     fun describeHouse() = println("House $color with $numRooms rooms.")
 }

@@ -1,19 +1,19 @@
 package org.example
 
 fun main() {
-    val dog = Dog("Buddy")
-    dog.makeSound()
-    dog.bark()
+    val car = ElectricVehicle("BYD", "Seal")
+    car.startEngine()
+    car.honk()
 }
 
-open class Pet(val name: String) {
-    fun makeSound() {
-        println("$name makes a sound")
+open class Vehicle(val brand: String) {
+    fun startEngine() {
+        println("$brand engine started!")
     }
 }
 
-class Dog(name: String) : Pet(name) {
-    fun bark() {
-        println("$name barks!")
+class ElectricVehicle(brand: String, val model: String) : Vehicle(brand) {
+    fun honk() {
+        println("$brand $model honks! Beep Beep!")
     }
 }
