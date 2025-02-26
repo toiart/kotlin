@@ -1,14 +1,12 @@
 package org.example
 
 fun main() {
-    Database.connect()
-
+    Logger.log("App started")
+    Logger.log("User logged in")
 }
 
-object Database {
-    val name = "MainDB"
-
-    fun connect() {
-        println("Connected to $name")
+object Logger {
+    fun log(message: String) {
+        println("[LOG] $message")
     }
 }
