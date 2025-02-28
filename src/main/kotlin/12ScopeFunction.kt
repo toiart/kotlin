@@ -1,6 +1,5 @@
 package org.example
 
-import java.awt.Rectangle
 import java.io.File
 
 fun main() {
@@ -19,11 +18,15 @@ private fun let() {
 }
 
 private fun run() {
-    val rectangle = Rectangle(5, 10)
-    val area = rectangle.run {
-        width * height
+    val numbers = mutableListOf(1, 2, 3, 4, 5)
+
+    val sum = numbers.run {
+        add(6)
+        add(7)
+        sum()
     }
-    println("Area: $area")
+
+    println("Sum: $sum")
 }
 
 private fun with() {
